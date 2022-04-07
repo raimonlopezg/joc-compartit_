@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://car-sprite-u0026-clipart-free-download-ywd-race-car-top-view-clipart-text-outdoors-sunglasses-nature-transparent-png-2811705.png" type="Texture" id=1]
+[ext_resource path="res://imatges/car-sprite-u0026-clipart-free-download-ywd-race-car-top-view-clipart-text-outdoors-sunglasses-nature-transparent-png-2811705.png" type="Texture" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
