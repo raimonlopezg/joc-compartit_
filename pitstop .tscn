@@ -2,7 +2,7 @@
 
 [ext_resource path="res://imatges/f104-jordan-riceman.bmp" type="Texture" id=1]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=9]
 resource_local_to_scene = true
 code = "shader_type canvas_item;
 
@@ -24,7 +24,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = SubResource( 9 )
 shader_param/marge = 0.001
 shader_param/color_eliminar = Color( 0, 0, 0, 1 )
 
@@ -67,6 +67,5 @@ animations = [ {
 show_behind_parent = true
 material = SubResource( 2 )
 frames = SubResource( 8 )
-frame = 1
 speed_scale = 0.5
 playing = true
