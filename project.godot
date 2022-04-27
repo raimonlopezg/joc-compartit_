@@ -41,6 +41,12 @@ D={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Cotxe"
+2d_physics/layer_2="Vores"
+2d_physics/layer_3="Arees"
+
 [physics]
 
 common/enable_pause_aware_picking=true

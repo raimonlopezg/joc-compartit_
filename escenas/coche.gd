@@ -3,7 +3,7 @@
 var velocitat := Vector2.ZERO
 var acceleracio := Vector2.ZERO
 var direccio := Vector2.RIGHT
-var velocitat_max := 120
+var velocitat_max := 110
 var velocitat_zero = 0
 var num_voltes = -2
 var velocitat_gir = 150
@@ -42,6 +42,6 @@ func _on_meta_body_entered(body):
 
 
 func _on_boxes_body_exited(body):
-	velocitat_max = 120
+	velocitat_max = 110
 func _on_boxes_body_entered(body):
 	velocitat_max = 60
