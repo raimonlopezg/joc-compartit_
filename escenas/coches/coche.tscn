@@ -4,6 +4,7 @@
 [ext_resource path="res://imatges/car-sprite-u0026-clipart-free-download-ywd-race-car-top-view-clipart-text-outdoors-sunglasses-nature-transparent-png-2811705.png" type="Texture" id=2]
 
 [node name="Coche" type="KinematicBody2D"]
+position = Vector2( 4, 0 )
 script = ExtResource( 1 )
 
 [node name="image" type="Sprite" parent="."]
