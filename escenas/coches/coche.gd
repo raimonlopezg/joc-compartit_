@@ -16,13 +16,14 @@ func _physics_process(delta) :
 	if Input.is_action_pressed("W") :
 		acceleracio = 65
 	else :
-		velocitat = lerp(velocitat, 0, 2/(velocitat + 1))
+		velocitat = lerp(velocitat, 0.000000000000000001, 2/(velocitat + 1))
 	if Input.is_action_pressed("S") :
 		acceleracio = -30
-	if Input.is_action_pressed("A"):
-		direccio = direccio.rotated(-deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
-	if Input.is_action_pressed("D"):
-		direccio = direccio.rotated(deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
+	if not velocitat == 0 :
+		if Input.is_action_pressed("A"):
+			direccio = direccio.rotated(-deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
+		if Input.is_action_pressed("D"):
+			direccio = direccio.rotated(deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
 	
 	velocitat += acceleracio * delta
 	if velocitat > velocitat_max :
@@ -39,4 +40,4 @@ func _on_meta_body_entered(body):
 func _on_boxes_body_exited(body):
 	velocitat_max = 110
 func _on_boxes_body_entered(body):
-	velocitat_max = 60
+	velocitat_max = 40
