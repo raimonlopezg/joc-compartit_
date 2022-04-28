@@ -5,7 +5,6 @@
 [ext_resource path="res://coche.gd" type="Script" id=3]
 [ext_resource path="res://escenas/meta area .tscn" type="PackedScene" id=4]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
 
