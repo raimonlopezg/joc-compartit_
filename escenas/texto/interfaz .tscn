@@ -20,15 +20,10 @@ script = ExtResource( 5 )
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
 
 [node name="VBox botones" type="VBoxContainer" parent="."]
-anchor_left = 0.389
-anchor_top = 0.415
-anchor_right = 0.611328
-anchor_bottom = 0.585
-margin_left = -0.336029
-margin_bottom = -3.05176e-05
-__meta__ = {
-"_edit_use_anchors_": true
-}
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -102.0
+margin_right = 228.0
 
 [node name="jugar" type="Button" parent="VBox botones"]
 margin_right = 228.0

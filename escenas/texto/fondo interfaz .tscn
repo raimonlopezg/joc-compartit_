@@ -22,14 +22,14 @@ position = Vector2( 900, 462 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 
+[node name="6YzTox31Pk" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 908, 100 )
+scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 4 )
+
 [node name="Aie99YkGt" type="Sprite" parent="ParallaxLayer"]
 material = SubResource( 1 )
 position = Vector2( 509.301, 278 )
 rotation = -3.14159
 scale = Vector2( 1.92994, 1.95251 )
 texture = ExtResource( 2 )
-
-[node name="6YzTox31Pk" type="Sprite" parent="ParallaxLayer"]
-position = Vector2( 908, 100 )
-scale = Vector2( 0.07, 0.07 )
-texture = ExtResource( 4 )
