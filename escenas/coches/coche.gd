@@ -1,6 +1,6 @@
  extends KinematicBody2D
 
-var velocitat := 0
+var velocitat := 0 setget canvi_velocitat
 var acceleracio := 0
 var direccio := Vector2.RIGHT
 var velocitat_max := 110
@@ -12,24 +12,30 @@ var angle = 0
 #vel_min  velocitat_gir = 200
 #vel_max  velocitat_gir = 80
 
+func canvi_velocitat(nova_velocitat):
+	velocitat = nova_velocitat
+	$Label.text = str(velocitat)
+	
+
 func _physics_process(delta) :
 	if Input.is_action_pressed("W") :
 		acceleracio = 65
-	else :
-		velocitat = lerp(velocitat, 0.000000000000000001, 2/(velocitat + 1))
+	else:
+		acceleracio = -10
+#		self.velocitat = lerp(velocitat, 0, 2/(velocitat + 1))
 	if Input.is_action_pressed("S") :
-		acceleracio = -30
+		acceleracio = -5
 	if not velocitat == 0 :
 		if Input.is_action_pressed("A"):
 			direccio = direccio.rotated(-deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
 		if Input.is_action_pressed("D"):
 			direccio = direccio.rotated(deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
 	
-	velocitat += acceleracio * delta
+	self.velocitat += acceleracio * delta
 	if velocitat > velocitat_max :
-		velocitat = velocitat_max
+		self.velocitat = velocitat_max
 	var moviment =  move_and_slide(velocitat * direccio)
-	velocitat = moviment.length()
+	self.velocitat = moviment.length()
 	if not moviment.is_equal_approx(Vector2.ZERO) :
 		direccio = moviment.normalized()
 	rotation = direccio.angle()
