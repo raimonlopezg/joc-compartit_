@@ -8,7 +8,6 @@ var velocitat_zero = 0
 var num_voltes = -1
 var velocitat_gir_min = 200
 var angle = 0
-
 #vel_min  velocitat_gir = 200
 #vel_max  velocitat_gir = 80
 
@@ -31,6 +30,16 @@ func _physics_process(delta) :
 		if Input.is_action_pressed("D"):
 			direccio = direccio.rotated(deg2rad(-1.09*velocitat + velocitat_gir_min) * delta)
 	
+	if velocitat > 90 and Input.is_action_just_released("W"):
+		$"foc dreta".play("frena")
+		$"foc esquerre".play("frena")
+		
+	if velocitat > 31 and Input.is_action_pressed("S"):
+		$"fum1 darrera".play("frena")
+		$"fum2 darrera".play("frena")
+		$"fum3 davant".play("frena")
+		$"fum4 davant".play("frena")
+
 	self.velocitat += acceleracio * delta
 	if velocitat > velocitat_max :
 		self.velocitat = velocitat_max
@@ -46,4 +55,14 @@ func _on_meta_body_entered(body):
 func _on_boxes_body_exited(body):
 	velocitat_max = 110
 func _on_boxes_body_entered(body):
-	velocitat_max = 40
+	velocitat_max = 30
+
+func _on_foc_esquerre_animation_finished():
+	$"foc dreta".play('default')
+	$"foc esquerre".play('default')
+
+func _on_fum1_darrera_animation_finished():
+	$"fum1 darrera".play("default")
+	$"fum2 darrera".play("default")
+	$"fum3 davant".play("default")
+	$"fum4 davant".play("default")

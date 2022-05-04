@@ -5,7 +5,7 @@
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_scale = Vector2( 0, 0 )
+motion_scale = Vector2( 2, 2 )
 motion_mirroring = Vector2( 3000, 3000 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxLayer"]
