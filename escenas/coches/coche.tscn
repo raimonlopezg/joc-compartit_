@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://escenas/coches/coche.gd" type="Script" id=1]
 [ext_resource path="res://imatges/car-sprite-u0026-clipart-free-download-ywd-race-car-top-view-clipart-text-outdoors-sunglasses-nature-transparent-png-2811705.png" type="Texture" id=2]
@@ -52,11 +52,6 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=7]
-flags = 4
-atlas = ExtResource( 15 )
-region = Rect2( 10, 0, 10, 20 )
-
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
 atlas = ExtResource( 15 )
@@ -74,7 +69,7 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "frena",
 "speed": 5.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=94 format=2]
 
 [ext_resource path="res://imatges/PNG/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://escenas/coches/coche.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://zona pitt.tscn" type="PackedScene" id=5]
 [ext_resource path="res://imatges/PNG/Tiles/Grass/land_grass04.png" type="Texture" id=6]
 [ext_resource path="res://imatges/PNG/Objects/tribune_empty.png" type="Texture" id=7]
+[ext_resource path="res://imatges/PNG/Objects/tree_large.png" type="Texture" id=8]
+[ext_resource path="res://imatges/PNG/Objects/tribune_overhang_red.png" type="Texture" id=9]
+[ext_resource path="res://imatges/PNG/Objects/arrow_white.png" type="Texture" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2293,7 +2296,7 @@ points = PoolVector2Array( 2.25, 128, 128, 64.25, 128, 80.25, 34.25, 128 )
 [node name="Node2D" type="Node2D"]
 
 [node name="LandGrass04" type="Sprite" parent="."]
-position = Vector2( 534, 322 )
+position = Vector2( 508, 173 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 6 )
 region_enabled = true
@@ -2304,12 +2307,12 @@ __meta__ = {
 }
 
 [node name="TribuneFull" type="Sprite" parent="."]
-position = Vector2( 539.5, 390 )
+position = Vector2( 539.5, 391 )
 scale = Vector2( 0.761, 0.06 )
 texture = ExtResource( 7 )
 
 [node name="TribuneFull2" type="Sprite" parent="."]
-position = Vector2( 539.5, 377 )
+position = Vector2( 539.5, 378 )
 scale = Vector2( 0.761, 0.06 )
 texture = ExtResource( 7 )
 
@@ -2322,6 +2325,16 @@ texture = ExtResource( 7 )
 position = Vector2( 324, 166 )
 scale = Vector2( 0.497768, 0.06 )
 texture = ExtResource( 7 )
+
+[node name="TribuneOverhangRed" type="Sprite" parent="."]
+position = Vector2( 539.5, 370.875 )
+scale = Vector2( 0.761161, 0.154514 )
+texture = ExtResource( 9 )
+
+[node name="TribuneOverhangRed2" type="Sprite" parent="."]
+position = Vector2( 324, 160.438 )
+scale = Vector2( 0.5, 0.146701 )
+texture = ExtResource( 9 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.05, 0.05 )
@@ -2344,6 +2357,151 @@ collision_layer = 4
 position = Vector2( 531, 429 )
 scale = Vector2( 1, 1.3 )
 collision_layer = 8
+
+[node name="TreeLarge2" type="Sprite" parent="."]
+position = Vector2( 759, 379 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge3" type="Sprite" parent="."]
+position = Vector2( 729, 381 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge4" type="Sprite" parent="."]
+position = Vector2( 783, 364 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge5" type="Sprite" parent="."]
+position = Vector2( 787, 338 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge6" type="Sprite" parent="."]
+position = Vector2( 372, 305 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge7" type="Sprite" parent="."]
+position = Vector2( 367, 279 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge8" type="Sprite" parent="."]
+position = Vector2( 347, 292 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge9" type="Sprite" parent="."]
+position = Vector2( 417, 307 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge10" type="Sprite" parent="."]
+position = Vector2( 420, 283 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge11" type="Sprite" parent="."]
+position = Vector2( 393, 290 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="TreeLarge12" type="Sprite" parent="."]
+position = Vector2( 441, 296 )
+scale = Vector2( 0.064, 0.064 )
+texture = ExtResource( 8 )
+
+[node name="ArrowWhite" type="Sprite" parent="."]
+position = Vector2( 782, 404 )
+rotation = 1.13446
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite3" type="Sprite" parent="."]
+position = Vector2( 816, 373 )
+rotation = 0.347321
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite4" type="Sprite" parent="."]
+position = Vector2( 811, 382 )
+rotation = 0.347321
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite5" type="Sprite" parent="."]
+position = Vector2( 804, 391 )
+rotation = 0.738274
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite6" type="Sprite" parent="."]
+position = Vector2( 794, 398 )
+rotation = 1.15366
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite2" type="Sprite" parent="."]
+position = Vector2( 819, 326 )
+rotation = 0.0471239
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite9" type="Sprite" parent="."]
+position = Vector2( 811, 310 )
+rotation = -1.15017
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite11" type="Sprite" parent="."]
+position = Vector2( 818, 316 )
+rotation = -0.345575
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite12" type="Sprite" parent="."]
+position = Vector2( 785, 225 )
+rotation = -0.462512
+scale = Vector2( 0.015, 0.015 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite14" type="Sprite" parent="."]
+position = Vector2( 787, 234 )
+rotation = -0.230383
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite16" type="Sprite" parent="."]
+position = Vector2( 779, 218 )
+rotation = -0.68766
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite15" type="Sprite" parent="."]
+position = Vector2( 772, 214 )
+rotation = -1.07163
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite18" type="Sprite" parent="."]
+position = Vector2( 691, 212 )
+rotation = -3.03164
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite19" type="Sprite" parent="."]
+position = Vector2( 693, 203 )
+rotation = -2.33874
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
+
+[node name="ArrowWhite20" type="Sprite" parent="."]
+position = Vector2( 702, 199 )
+rotation = -1.5324
+scale = Vector2( 0.015, 0.0132055 )
+texture = ExtResource( 10 )
 
 [node name="Coche" parent="." instance=ExtResource( 2 )]
 position = Vector2( 466, 413 )
