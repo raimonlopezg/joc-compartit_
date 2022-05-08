@@ -1,15 +1,16 @@
-[gd_scene load_steps=94 format=2]
+[gd_scene load_steps=95 format=2]
 
 [ext_resource path="res://imatges/PNG/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://escenas/coches/coche.tscn" type="PackedScene" id=2]
 [ext_resource path="res://escenas/zonas/areas importants .tscn" type="PackedScene" id=3]
 [ext_resource path="res://escenas/zonas/zona boxes.tscn" type="PackedScene" id=4]
-[ext_resource path="res://zona pitt.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenas/zonas/zona pitt.tscn" type="PackedScene" id=5]
 [ext_resource path="res://imatges/PNG/Tiles/Grass/land_grass04.png" type="Texture" id=6]
 [ext_resource path="res://imatges/PNG/Objects/tribune_empty.png" type="Texture" id=7]
 [ext_resource path="res://imatges/PNG/Objects/tree_large.png" type="Texture" id=8]
 [ext_resource path="res://imatges/PNG/Objects/tribune_overhang_red.png" type="Texture" id=9]
 [ext_resource path="res://imatges/PNG/Objects/arrow_white.png" type="Texture" id=10]
+[ext_resource path="res://escenas/texto/velocimetre.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2507,6 +2508,10 @@ texture = ExtResource( 10 )
 position = Vector2( 466, 413 )
 scale = Vector2( 0.15, 0.15 )
 collision_mask = 14
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 11 )]
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [connection signal="body_entered" from="boxes" to="Coche" method="_on_boxes_body_entered"]
 [connection signal="body_exited" from="boxes" to="Coche" method="_on_boxes_body_exited"]

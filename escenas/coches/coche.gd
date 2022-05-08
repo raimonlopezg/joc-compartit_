@@ -11,7 +11,7 @@ var angle = 0
 
 func canvi_velocitat(nova_velocitat):
 	velocitat = nova_velocitat
-	$Label.text = str(velocitat)
+	emit_signal('velocitat_canviada',nova_velocitat)
 	
 func _physics_process(delta) :
 	if Input.is_action_pressed("W") :
