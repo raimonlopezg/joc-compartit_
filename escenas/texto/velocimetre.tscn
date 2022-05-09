@@ -11,12 +11,12 @@ script = ExtResource( 3 )
 
 [node name="velocimetre" type="Sprite" parent="."]
 position = Vector2( 81, 81 )
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
 
 [node name="agulla" type="Sprite" parent="."]
 position = Vector2( 81, 81 )
 rotation = -3.90605
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 offset = Vector2( 73, -5.5 )
