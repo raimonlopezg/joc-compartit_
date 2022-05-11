@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://escenas/coches/coche.gd" type="Script" id=1]
-[ext_resource path="res://imatges/car-sprite-u0026-clipart-free-download-ywd-race-car-top-view-clipart-text-outdoors-sunglasses-nature-transparent-png-2811705.png" type="Texture" id=2]
+[ext_resource path="res://imatges/aaaaaa-removebg-preview.png" type="Texture" id=2]
 [ext_resource path="res://fire_fx_v1.0/png/orange/start/burning_start_1.png" type="Texture" id=3]
 [ext_resource path="res://Smoke Effect 01/VFX 2 Separated frames/Smoke VFX B2.png" type="Texture" id=4]
 [ext_resource path="res://Smoke Effect 01/VFX 2 Separated frames/Smoke VFX B4.png" type="Texture" id=5]
@@ -137,7 +137,8 @@ playing = true
 
 [node name="image" type="Sprite" parent="."]
 position = Vector2( -4, 0 )
-scale = Vector2( 0.075, 0.075 )
+rotation = 3.14159
+scale = Vector2( 0.11, 0.11 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

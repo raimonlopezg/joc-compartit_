@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://imatges/PNG/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://escenas/coches/coche.tscn" type="PackedScene" id=2]
@@ -12,6 +12,12 @@
 [ext_resource path="res://imatges/PNG/Objects/arrow_white.png" type="Texture" id=10]
 [ext_resource path="res://escenas/texto/velocimetre.tscn" type="PackedScene" id=11]
 [ext_resource path="res://imatges/mar.jpg" type="Texture" id=12]
+[ext_resource path="res://imatges/wall2.png" type="Texture" id=13]
+[ext_resource path="res://imatges/kisspng-boating-yacht-boat-show-ship-boat-top-view-5b25a2381c7862.6079483915291930161166.png" type="Texture" id=14]
+[ext_resource path="res://imatges/a.png" type="Texture" id=15]
+[ext_resource path="res://imatges/pngkit_yacht-png_92860.png" type="Texture" id=17]
+[ext_resource path="res://imatges/pngkit_boat-png_3961093.png" type="Texture" id=19]
+[ext_resource path="res://imatges/pngkit_yacht-png_122764.png" type="Texture" id=20]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2298,7 +2304,7 @@ points = PoolVector2Array( 2.25, 128, 128, 64.25, 128, 80.25, 34.25, 128 )
 [node name="Node2D" type="Node2D"]
 
 [node name="Gespa background" type="Sprite" parent="."]
-position = Vector2( 508, 173 )
+position = Vector2( 395, 156 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 6 )
 region_enabled = true
@@ -2309,12 +2315,174 @@ __meta__ = {
 }
 
 [node name="Mar" type="Sprite" parent="."]
-position = Vector2( 210, 251 )
-scale = Vector2( 0.06, 0.06 )
+position = Vector2( 201, 304 )
+scale = Vector2( 0.0290433, 0.0246773 )
 texture = ExtResource( 12 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1000, 1000 )
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
 region_filter_clip = true
+
+[node name="Mar2" type="Sprite" parent="Mar"]
+position = Vector2( 619.766, -1580.4 )
+scale = Vector2( 0.999999, 0.999999 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar3" type="Sprite" parent="Mar"]
+position = Vector2( -1583.84, -40.5283 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar4" type="Sprite" parent="Mar"]
+position = Vector2( -1514.98, -1742.49 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar5" type="Sprite" parent="Mar"]
+position = Vector2( -550.902, -2431.39 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar6" type="Sprite" parent="Mar"]
+position = Vector2( 619.765, 324.184 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar7" type="Sprite" parent="Mar"]
+position = Vector2( 619.765, -567.324 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar8" type="Sprite" parent="Mar"]
+position = Vector2( 585.333, 1580.39 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar9" type="Sprite" parent="Mar"]
+position = Vector2( -1101.8, 932.028 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar10" type="Sprite" parent="Mar"]
+position = Vector2( 929.648, -3241.86 )
+scale = Vector2( 0.852941, 0.782692 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar11" type="Sprite" parent="Mar"]
+position = Vector2( 1131.93, -4092.83 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar12" type="Sprite" parent="Mar"]
+position = Vector2( 6094.35, -3363.42 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar13" type="Sprite" parent="Mar"]
+position = Vector2( 4889.26, -3241.85 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar14" type="Sprite" parent="Mar"]
+position = Vector2( 3512, -3241.85 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar15" type="Sprite" parent="Mar"]
+position = Vector2( 2272.47, -3201.32 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Mar16" type="Sprite" parent="Mar"]
+position = Vector2( 7437.16, -3201.32 )
+scale = Vector2( 0.818627, 0.796154 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( -58.329, 36.0146, 1756.85, 2634.43 )
+region_filter_clip = true
+
+[node name="Wall2" type="Sprite" parent="."]
+position = Vector2( 244, 362 )
+rotation = -1.5708
+scale = Vector2( 0.02, 0.02 )
+texture = ExtResource( 13 )
+
+[node name="Wall4" type="Sprite" parent="Wall2"]
+position = Vector2( 2800, -0.000976563 )
+texture = ExtResource( 13 )
+
+[node name="Wall11" type="Sprite" parent="Wall2"]
+position = Vector2( 3200, -0.000976563 )
+texture = ExtResource( 13 )
+
+[node name="Wall10" type="Sprite" parent="Wall2"]
+position = Vector2( 2400, -0.000976563 )
+texture = ExtResource( 13 )
+
+[node name="Wall5" type="Sprite" parent="Wall2"]
+position = Vector2( 2000, -0.00195313 )
+texture = ExtResource( 13 )
+
+[node name="Wall6" type="Sprite" parent="Wall2"]
+position = Vector2( 1600, -0.00195313 )
+texture = ExtResource( 13 )
+
+[node name="Wall7" type="Sprite" parent="Wall2"]
+position = Vector2( 1200, -0.000976563 )
+texture = ExtResource( 13 )
+
+[node name="Wall8" type="Sprite" parent="Wall2"]
+position = Vector2( 800, 0 )
+texture = ExtResource( 13 )
+
+[node name="Wall9" type="Sprite" parent="Wall2"]
+position = Vector2( 400, -0.000976563 )
+texture = ExtResource( 13 )
+
+[node name="Wall12" type="Sprite" parent="Wall2"]
+position = Vector2( 3600, 0 )
+texture = ExtResource( 13 )
 
 [node name="Tribunes" type="Sprite" parent="."]
 position = Vector2( 539.5, 391 )
@@ -2427,13 +2595,11 @@ texture = ExtResource( 10 )
 [node name="ArrowWhite3" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -915.09, -2927.71 )
 rotation = -0.787139
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite4" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -512.18, -2372.04 )
 rotation = -0.787139
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite5" type="Sprite" parent="Fletxes blanques"]
@@ -2444,31 +2610,26 @@ texture = ExtResource( 10 )
 [node name="ArrowWhite6" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -24.4258, -894.098 )
 rotation = 0.0192001
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite2" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -3670.32, -4433.19 )
 rotation = -1.08734
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite9" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -4862.45, -4400.62 )
 rotation = -2.28463
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite11" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -4302.7, -4654.52 )
 rotation = -1.48003
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite12" type="Sprite" parent="Fletxes blanques"]
 position = Vector2( -10730.7, -5224.55 )
 rotation = -1.59697
-scale = Vector2( 1, 1 )
 texture = ExtResource( 10 )
 
 [node name="ArrowWhite14" type="Sprite" parent="Fletxes blanques"]
@@ -2516,6 +2677,32 @@ collision_mask = 14
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
+[node name="barco" type="Sprite" parent="."]
+position = Vector2( 231, 289 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 15 )
+
+[node name="Kisspng-boating-yacht-boat-show-ship-boat-top-view-5B25A2381C78626079483915291930161166" type="Sprite" parent="barco"]
+position = Vector2( -175, -350 )
+rotation = -3.14159
+texture = ExtResource( 14 )
+
+[node name="PngkitYacht-png92860" type="Sprite" parent="barco"]
+position = Vector2( 0, -700 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="PngkitYacht-png122764" type="Sprite" parent="barco"]
+position = Vector2( 1500, -1350 )
+rotation = -4.44089e-15
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 20 )
+
+[node name="PngkitBoat-png3961093" type="Sprite" parent="barco"]
+position = Vector2( 0, -1000 )
+texture = ExtResource( 19 )
+
 [connection signal="body_entered" from="meta" to="Coche" method="_on_meta_body_entered"]
 [connection signal="body_entered" from="boxes zona" to="Coche" method="_on_boxes_body_entered"]
 [connection signal="body_exited" from="boxes zona" to="Coche" method="_on_boxes_body_exited"]
+[connection signal="velocitat_canviada" from="Coche" to="Velocimetro" method="_on_Coche_velocitat_canviada"]

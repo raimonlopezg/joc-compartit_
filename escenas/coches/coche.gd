@@ -9,6 +9,8 @@ var num_voltes = -1
 var velocitat_gir_min = 200
 var angle = 0
 
+signal velocitat_canviada(nova_velocitat)
+
 func canvi_velocitat(nova_velocitat):
 	velocitat = nova_velocitat
 	emit_signal('velocitat_canviada',nova_velocitat)
