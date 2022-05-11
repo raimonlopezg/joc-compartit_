@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/tree_large.png-f614731baeb41f3a2b5d15605fa259b6.stex"

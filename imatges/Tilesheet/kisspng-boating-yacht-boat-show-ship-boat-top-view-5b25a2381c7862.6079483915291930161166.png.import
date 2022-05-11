@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/kisspng-boating-yacht-boat-show-ship-boat-top-view-5b25a2381c7862.6079483915291930161166.png-f305a0c89d1b094606b3954d76dd9e98.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://imatges/Tilesheet/kisspng-boating-yacht-boat-show-ship-boat-top-view-5b25a2381c7862.6079483915291930161166.png"
+dest_files=[ "res://.import/kisspng-boating-yacht-boat-show-ship-boat-top-view-5b25a2381c7862.6079483915291930161166.png-f305a0c89d1b094606b3954d76dd9e98.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

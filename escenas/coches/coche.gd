@@ -71,5 +71,8 @@ func _on_fum1_darrera_animation_finished():
 func _on_foc_blau_dreta_animation_finished():
 	$"foc blau esquerre".play("default")
 	$"foc blau dreta".play("default")
-
-
+func _on_boxes_equip2_body_entered(body):
+	if velocitat == 0 :
+		print ("a")
+func _on_checkpoint_body_entered(body):
+	print ("b")

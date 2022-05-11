@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Theme" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = 21.0
+margin_top = 23.0
+margin_right = 42.0
+margin_bottom = 64.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 22.0
+margin_top = 23.0
+margin_right = 41.0
+margin_bottom = 63.0
+color = Color( 0.545098, 0.545098, 0.545098, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+margin_left = -289.0
+margin_top = 12.0
+margin_right = 79.0
+margin_bottom = 26.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -288.0
+margin_top = 13.0
+margin_right = 78.0
+margin_bottom = 25.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+margin_right = 40.0
+margin_bottom = 12.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="ColorRect2"]
+margin_left = 320.0
+margin_right = 360.0
+margin_bottom = 12.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect2"]
+margin_left = 240.0
+margin_right = 280.0
+margin_bottom = 12.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect2"]
+margin_left = 160.0
+margin_right = 200.0
+margin_bottom = 12.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
+margin_left = 80.0
+margin_right = 120.0
+margin_bottom = 12.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 77.0
+margin_top = -2.0
+margin_right = 119.0
+margin_bottom = 40.0
+theme = SubResource( 1 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 78.0
+margin_top = -1.0
+margin_right = 118.0
+margin_bottom = 39.0
+theme = SubResource( 1 )
+color = Color( 1, 0.984314, 0, 1 )
