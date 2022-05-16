@@ -2323,7 +2323,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 310.83, -0.25, 0, 0.25, 0, 932.5, -0.25, 0, 0.25, 0, 2056.28, -0.25, 0, 0.25, 0, 2428.82, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 310.83, -0.25, 0, 0.25, 0, 932.5, -0.25, 0, 0.25, 0, 2056.28, -0.25, 0, 0.25, 0, 2457.87, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 3.5, 11.5, 27, 32 )
 }
 
@@ -2877,9 +2877,10 @@ collision_layer = 8
 
 [node name="checkpoint" parent="zonas" instance=ExtResource( 27 )]
 position = Vector2( -70, -77 )
+collision_layer = 4
 
 [node name="Coche" parent="." instance=ExtResource( 2 )]
-position = Vector2( 482, 406 )
+position = Vector2( 557, 415 )
 scale = Vector2( 0.15, 0.15 )
 collision_mask = 14
 
@@ -2892,10 +2893,13 @@ position = Vector2( -1, 0 )
 curve = ExtResource( 29 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2( 480, 413 )
+position = Vector2( 507, 413 )
+rotation = 0.0527177
 
 [node name="MARC" parent="Path2D2/PathFollow2D" instance=ExtResource( 28 )]
 scale = Vector2( 0.16, 0.15 )
+collision_layer = 7
+collision_mask = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D/MARC"]
 autoplay = "Corre"
@@ -2905,4 +2909,5 @@ anims/RESET = SubResource( 91 )
 [connection signal="body_entered" from="zonas" to="Coche" method="_on_meta_body_entered"]
 [connection signal="body_entered" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_entered"]
 [connection signal="body_exited" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_exited"]
+[connection signal="body_entered" from="zonas/checkpoint" to="Coche" method="_on_checkpoint_body_entered"]
 [connection signal="velocitat_canviada" from="Coche" to="Velocimetro" method="_on_Coche_velocitat_canviada"]
