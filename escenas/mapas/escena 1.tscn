@@ -28,6 +28,7 @@
 [ext_resource path="res://imatges/Tilesheet/barrera.tscn" type="PackedScene" id=26]
 [ext_resource path="res://escenas/zonas/checkpoint.tscn" type="PackedScene" id=27]
 [ext_resource path="res://escenas/coches/coche 2 .tscn" type="PackedScene" id=28]
+[ext_resource path="res://escenas/mapas/Recorregut1.tres" type="Curve2D" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2311,52 +2312,32 @@ points = PoolVector2Array( 2.25, 128, 128, 64.25, 128, 80.25, 34.25, 128 )
 } ]
 90/z_index = 0
 
-[sub_resource type="Curve2D" id=90]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 482, 414, 0, 0, 0, 0, 554, 414, 0, 0, 0, 0, 619, 413, 0, 0, 0, 0, 770, 416, 0, 0, 0, 0, 818, 390, 0, 0, 0, 0, 829, 362, 0, 0, 0, 0, 826, 318, 9.25, 2, -9.25, -2, 815, 305, 0, 0, 0, 0, 798, 308, 3.75, 1.25, -3.75, -1.25, 779, 305, -0.25, 14, 0.25, -14, 779, 285, 0, 0, 0, 0, 790, 255, 8.26823, 12.8354, -8.26823, -12.8354, 796, 231, 4.40972, 4.88219, -4.40972, -4.88219, 783, 214, 0, 0, 0, 0, 764, 203, 0, 0, 0, 0, 750, 197, 0, 0, 0, 0, 750, 197, 17.25, 1, -17.25, -1, 721, 191, 0, 0, 0, 0, 689, 197 )
+[sub_resource type="Animation" id=90]
+resource_name = "Corre"
+length = 32.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 310.83, -0.25, 0, 0.25, 0, 932.5, -0.25, 0, 0.25, 0, 2056.28, -0.25, 0, 0.25, 0, 2428.82, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3.5, 11.5, 27, 32 )
 }
 
 [sub_resource type="Animation" id=91]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("..:curve")
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("..:offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ SubResource( 90 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:offset")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 71.95 ]
-}
-
-[sub_resource type="Animation" id=92]
-resource_name = "animacio"
-length = 35.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0.1, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 144.65 ]
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
 }
 
 [node name="Node2D" type="Node2D"]
@@ -2908,21 +2889,18 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Path2D2" type="Path2D" parent="."]
 position = Vector2( -1, 0 )
-curve = SubResource( 90 )
+curve = ExtResource( 29 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2( 553.996, 413.986 )
-rotation = -0.0115285
-offset = 71.95
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D"]
-autoplay = "animacio"
-anims/RESET = SubResource( 91 )
-anims/animacio = SubResource( 92 )
+position = Vector2( 480, 413 )
 
 [node name="MARC" parent="Path2D2/PathFollow2D" instance=ExtResource( 28 )]
-position = Vector2( -3.05176e-05, -6.10352e-05 )
 scale = Vector2( 0.16, 0.15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D/MARC"]
+autoplay = "Corre"
+anims/Corre = SubResource( 90 )
+anims/RESET = SubResource( 91 )
 
 [connection signal="body_entered" from="zonas" to="Coche" method="_on_meta_body_entered"]
 [connection signal="body_entered" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_entered"]
