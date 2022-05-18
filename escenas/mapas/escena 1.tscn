@@ -2314,7 +2314,7 @@ points = PoolVector2Array( 2.25, 128, 128, 64.25, 128, 80.25, 34.25, 128 )
 
 [sub_resource type="Animation" id=90]
 resource_name = "Corre"
-length = 32.0
+length = 29.0
 loop = true
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("..:offset")
@@ -2323,8 +2323,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 310.83, -0.25, 0, 0.25, 0, 932.5, -0.25, 0, 0.25, 0, 2056.28, -0.25, 0, 0.25, 0, 2457.87, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 3.5, 11.5, 27, 32 )
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 516.74, -0.25, 0, 0.25, 0, 968.35, -0.25, 0, 0.25, 0, 1407.42, -0.25, 0, 0.25, 0, 1962.69, -0.25, 0, 0.25, 0, 2461.02, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 6.9, 13, 18, 23, 29 )
 }
 
 [sub_resource type="Animation" id=91]
@@ -2880,7 +2880,7 @@ position = Vector2( -70, -77 )
 collision_layer = 4
 
 [node name="Coche" parent="." instance=ExtResource( 2 )]
-position = Vector2( 557, 415 )
+position = Vector2( 493, 406 )
 scale = Vector2( 0.15, 0.15 )
 collision_mask = 14
 
@@ -2894,15 +2894,18 @@ curve = ExtResource( 29 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
 position = Vector2( 507, 413 )
-rotation = 0.0527177
+rotation = 0.0722325
 
 [node name="MARC" parent="Path2D2/PathFollow2D" instance=ExtResource( 28 )]
 scale = Vector2( 0.16, 0.15 )
 collision_layer = 7
 collision_mask = 6
 
+[node name="Timer" type="Timer" parent="Path2D2/PathFollow2D/MARC"]
+wait_time = 3.0
+autostart = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D2/PathFollow2D/MARC"]
-autoplay = "Corre"
 anims/Corre = SubResource( 90 )
 anims/RESET = SubResource( 91 )
 
@@ -2911,3 +2914,4 @@ anims/RESET = SubResource( 91 )
 [connection signal="body_exited" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_exited"]
 [connection signal="body_entered" from="zonas/checkpoint" to="Coche" method="_on_checkpoint_body_entered"]
 [connection signal="velocitat_canviada" from="Coche" to="Velocimetro" method="_on_Coche_velocitat_canviada"]
+[connection signal="timeout" from="Path2D2/PathFollow2D/MARC/Timer" to="Path2D2/PathFollow2D/MARC/AnimationPlayer" method="play" binds= [ "Corre" ]]
