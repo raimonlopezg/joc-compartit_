@@ -19,7 +19,8 @@ func canvi_velocitat(nova_velocitat):
 	emit_signal('velocitat_canviada',nova_velocitat)
 	
 func _physics_process(delta) :
-	print((OS.get_ticks_msec() - temps_inicial)/1000.0)
+
+	$Velocimetro/Label2.text = str(clamp((OS.get_ticks_msec() - temps_inicial)/1000.0, 0, 1000000))
 	if Input.is_action_pressed("W") and timer == false:
 		acceleracio = 75
 	else:
@@ -83,7 +84,7 @@ func _on_meta_body_entered(body):
 			num_voltes = num_voltes + 1
 			temps_final = ((OS.get_ticks_msec() - temps_inicial)/1000.0)
 			temps_inicial = OS.get_ticks_msec()
-			$"ParallaxBackground/ParallaxLayer/temps actual".text = str(temps_inicial)
+			$Velocimetro/Label2.text = str(temps_inicial)
 		checkpoint = 0
 		print ("portes ",num_voltes," voltes acabades")
 
