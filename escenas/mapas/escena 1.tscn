@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=2]
+[gd_scene load_steps=117 format=2]
 
 [ext_resource path="res://imatges/Tilesheet/PNG/spritesheet_tiles.png" type="Texture" id=1]
 [ext_resource path="res://escenas/coches/coche.tscn" type="PackedScene" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://escenas/zonas/checkpoint.tscn" type="PackedScene" id=27]
 [ext_resource path="res://escenas/coches/coche 2 .tscn" type="PackedScene" id=28]
 [ext_resource path="res://escenas/mapas/Recorregut1.tres" type="Curve2D" id=29]
+[ext_resource path="res://imatges/Intro/kenney_fontpackage/Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=30]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2312,6 +2313,10 @@ points = PoolVector2Array( 2.25, 128, 128, 64.25, 128, 80.25, 34.25, 128 )
 } ]
 90/z_index = 0
 
+[sub_resource type="DynamicFont" id=92]
+size = 100
+font_data = ExtResource( 30 )
+
 [sub_resource type="Animation" id=90]
 resource_name = "Corre"
 length = 29.0
@@ -2884,7 +2889,17 @@ position = Vector2( 493, 406 )
 scale = Vector2( 0.15, 0.15 )
 collision_mask = 14
 
-[node name="Velocimetro" parent="." instance=ExtResource( 11 )]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Coche"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Coche/ParallaxBackground"]
+
+[node name="temps actual" type="Label" parent="Coche/ParallaxBackground/ParallaxLayer"]
+margin_left = 410.0
+margin_right = 486.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 92 )
+
+[node name="Velocimetro" parent="Coche/ParallaxBackground" instance=ExtResource( 11 )]
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
@@ -2913,5 +2928,5 @@ anims/RESET = SubResource( 91 )
 [connection signal="body_entered" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_entered"]
 [connection signal="body_exited" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_exited"]
 [connection signal="body_entered" from="zonas/checkpoint" to="Coche" method="_on_checkpoint_body_entered"]
-[connection signal="velocitat_canviada" from="Coche" to="Velocimetro" method="_on_Coche_velocitat_canviada"]
+[connection signal="velocitat_canviada" from="Coche" to="Coche/ParallaxBackground/Velocimetro" method="_on_Coche_velocitat_canviada"]
 [connection signal="timeout" from="Path2D2/PathFollow2D/MARC/Timer" to="Path2D2/PathFollow2D/MARC/AnimationPlayer" method="play" binds= [ "Corre" ]]

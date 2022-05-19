@@ -11,6 +11,7 @@ var angle = 0
 var timer = true
 var checkpoint = 0
 var temps_inicial = 1000000
+var temps_final = 0
 signal velocitat_canviada(nova_velocitat)
 
 func canvi_velocitat(nova_velocitat):
@@ -80,9 +81,13 @@ func _on_meta_body_entered(body):
 	if body.name == 'Coche':
 		if checkpoint == 1:
 			num_voltes = num_voltes + 1
+			temps_final = ((OS.get_ticks_msec() - temps_inicial)/1000.0)
+			temps_inicial = OS.get_ticks_msec()
+			$"ParallaxBackground/ParallaxLayer/temps actual".text = str(temps_inicial)
 		checkpoint = 0
 		print ("portes ",num_voltes," voltes acabades")
 
 func _on_Timer_timeout():
 	timer = false
 	temps_inicial = OS.get_ticks_msec()
+	
