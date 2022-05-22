@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://escenas/zonas/zona boxes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/zonas/areas importants .tscn" type="PackedScene" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://imatges/Cotxes colors/range rover.png" type="Texture" id=18]
 [ext_resource path="res://escenas/coches/drift.tscn" type="PackedScene" id=19]
 [ext_resource path="res://escenas/coches/aaaaaaaaaaaa.tscn" type="PackedScene" id=20]
+[ext_resource path="res://imatges/Tilesheet/PNG/Objects/tribune_empty.png" type="Texture" id=21]
+[ext_resource path="res://imatges/Tilesheet/PNG/Objects/tribune_overhang_red.png" type="Texture" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=93]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2418,6 +2420,37 @@ __meta__ = {
 "_editor_description_": ""
 }
 
+[node name="Sprite3" type="Sprite" parent="mapa"]
+position = Vector2( 4765.44, 1961.42 )
+rotation = -2.03331
+scale = Vector2( 4.64695, 1 )
+texture = ExtResource( 21 )
+
+[node name="Sprite4" type="Sprite" parent="mapa/Sprite3"]
+position = Vector2( -0.11499, 205.963 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 21 )
+
+[node name="Sprite5" type="Sprite" parent="mapa/Sprite3"]
+position = Vector2( 0.856201, 241.735 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 22 )
+
+[node name="Sprite" type="Sprite" parent="mapa"]
+position = Vector2( 1510, 2750 )
+rotation = -3.14159
+scale = Vector2( 7.61, 1 )
+texture = ExtResource( 21 )
+
+[node name="Sprite2" type="Sprite" parent="mapa/Sprite"]
+position = Vector2( 0, -200 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 21 )
+
+[node name="Sprite" type="Sprite" parent="mapa/Sprite"]
+position = Vector2( 0, -240 )
+texture = ExtResource( 22 )
+
 [node name="TileMap2" type="TileMap" parent="mapa"]
 modulate = Color( 0.847059, 0.8, 0.8, 1 )
 position = Vector2( -3950, -1560 )
@@ -2514,7 +2547,7 @@ position = Vector2( 528, 398 )
 collision_layer = 4
 
 [node name="boxes zona" parent="zonas" instance=ExtResource( 1 )]
-position = Vector2( 11, -8.00006 )
+position = Vector2( 11, -7 )
 scale = Vector2( 1, 1 )
 collision_layer = 4
 
