@@ -12,6 +12,8 @@ var timer = true
 var checkpoint = 0
 var temps_inicial = 1000000
 var temps_final = 0
+var millor_temps = 29.042
+
 signal velocitat_canviada(nova_velocitat)
 
 func canvi_velocitat(nova_velocitat):
@@ -19,8 +21,7 @@ func canvi_velocitat(nova_velocitat):
 	emit_signal('velocitat_canviada',nova_velocitat)
 	
 func _physics_process(delta) :
-
-	$Velocimetro/Label2.text = str(clamp((OS.get_ticks_msec() - temps_inicial)/1000.0, 0, 1000000))
+	$"Velocimetro/tempos/Label2".text = str(clamp((OS.get_ticks_msec() - temps_inicial)/1000.0, 0, 1000000))
 	if Input.is_action_pressed("W") and timer == false:
 		acceleracio = 75
 	else:
@@ -62,7 +63,6 @@ func _on_boxes_body_exited(body):
 	velocitat_max = 120
 func _on_boxes_body_entered(body):
 	velocitat_max = 30
-	
 func _on_foc_esquerre_animation_finished():
 	$"foc dreta".play('default')
 	$"foc esquerre".play('default')
@@ -74,7 +74,6 @@ func _on_fum1_darrera_animation_finished():
 func _on_foc_blau_dreta_animation_finished():
 	$"foc blau esquerre".play("default")
 	$"foc blau dreta".play("default")
-
 func _on_checkpoint_body_entered(body):
 	if body.name == 'Coche':
 		checkpoint = 1
@@ -84,10 +83,14 @@ func _on_meta_body_entered(body):
 			num_voltes = num_voltes + 1
 			temps_final = ((OS.get_ticks_msec() - temps_inicial)/1000.0)
 			temps_inicial = OS.get_ticks_msec()
-			$Velocimetro/Label2.text = str(temps_inicial)
+			$"Velocimetro/tempos/Label2".text = str(temps_inicial)
+			$"Velocimetro/tempos/Label3".text = str(temps_final)
+			if temps_final < millor_temps :
+				$"Velocimetro/tempos/Label4".text = str(temps_final)
+			else :
+				$"Velocimetro/tempos/Label4".text = str(millor_temps)
 		checkpoint = 0
 		print ("portes ",num_voltes," voltes acabades")
-
 func _on_Timer_timeout():
 	timer = false
 	temps_inicial = OS.get_ticks_msec()
