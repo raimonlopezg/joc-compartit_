@@ -2661,7 +2661,7 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 18 )
 
 [node name="Prking2" type="Sprite" parent="mapa/Prking"]
-position = Vector2( -966.666, 0.00244141 )
+position = Vector2( -983.332, 0.00292969 )
 rotation = -4.54747e-13
 texture = ExtResource( 18 )
 

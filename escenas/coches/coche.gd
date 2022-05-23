@@ -90,10 +90,12 @@ func _on_meta_body_entered(body):
 			temps_inicial = OS.get_ticks_msec()
 			$"Velocimetro/tempos/Label2".text = str(temps_inicial)
 			$"Velocimetro/tempos/Label3".text = str(temps_final)
-			if temps_final < temps_bot[escena] or temps_final < millor_temps :
+			if temps_final < temps_bot[escena] and temps_final < millor_temps :
 				$"Velocimetro/tempos/Label4".text = str(temps_final)
-			else :
+			if temps_final > temps_bot[escena] :
 				$"Velocimetro/tempos/Label4".text = str(temps_bot[escena])
+			if temps_final < temps_bot[escena] and temps_final > millor_temps :
+				$"Velocimetro/tempos/Label4".text = str(millor_temps)
 		checkpoint = 0
 		print ("portes ",num_voltes," voltes acabades")
 func _on_Timer_timeout():
