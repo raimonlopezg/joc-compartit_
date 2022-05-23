@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=2]
+[gd_scene load_steps=118 format=2]
 
 [ext_resource path="res://escenas/zonas/zona boxes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/zonas/areas importants .tscn" type="PackedScene" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://escenas/coches/aaaaaaaaaaaa.tscn" type="PackedScene" id=20]
 [ext_resource path="res://imatges/Tilesheet/PNG/Objects/tribune_empty.png" type="Texture" id=21]
 [ext_resource path="res://imatges/Tilesheet/PNG/Objects/tribune_overhang_red.png" type="Texture" id=22]
+[ext_resource path="res://escenas/mapas/escena 2.gd" type="Script" id=23]
+[ext_resource path="res://escenas/texto/321go.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=93]
 points = PoolVector2Array( 17.6713, 0, 17.6713, 128, 0, 128, 0, 0 )
@@ -2408,6 +2410,7 @@ tracks/0/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 23 )
 
 [node name="mapa" type="Sprite" parent="."]
 position = Vector2( 395, 156 )
@@ -2428,12 +2431,10 @@ texture = ExtResource( 21 )
 
 [node name="Sprite4" type="Sprite" parent="mapa/Sprite3"]
 position = Vector2( -0.11499, 205.963 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Sprite5" type="Sprite" parent="mapa/Sprite3"]
 position = Vector2( 0.856201, 241.735 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 22 )
 
 [node name="Sprite" type="Sprite" parent="mapa"]
@@ -2444,7 +2445,6 @@ texture = ExtResource( 21 )
 
 [node name="Sprite2" type="Sprite" parent="mapa/Sprite"]
 position = Vector2( 0, -200 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 21 )
 
 [node name="Sprite" type="Sprite" parent="mapa/Sprite"]
@@ -2548,17 +2548,14 @@ collision_layer = 4
 
 [node name="boxes zona" parent="zonas" instance=ExtResource( 1 )]
 position = Vector2( 11, -7 )
-scale = Vector2( 1, 1 )
 collision_layer = 4
 
 [node name="boxes equip" parent="zonas" instance=ExtResource( 7 )]
 position = Vector2( 0, -6.00006 )
-scale = Vector2( 1, 1 )
 collision_layer = 8
 
 [node name="checkpoint" parent="zonas" instance=ExtResource( 5 )]
 position = Vector2( 108, -33 )
-scale = Vector2( 1, 1 )
 collision_layer = 4
 
 [node name="Coche" parent="." instance=ExtResource( 3 )]
@@ -2763,6 +2760,8 @@ root_node = NodePath("../../MARC2")
 autoplay = "Corre"
 anims/Corre = SubResource( 182 )
 anims/RESET = SubResource( 183 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 24 )]
 
 [connection signal="body_entered" from="zonas" to="Coche" method="_on_meta_body_entered"]
 [connection signal="body_entered" from="zonas/boxes zona" to="Coche" method="_on_boxes_body_entered"]

@@ -12,9 +12,13 @@ var timer = true
 var checkpoint = 0
 var temps_inicial = 1000000
 var temps_final = 0
-var millor_temps = 29.042
+var millor_temps = 0
+var escena = 0
+var temps_bot = [29.042, 230923]
+
 
 signal velocitat_canviada(nova_velocitat)
+signal volta_nova
 
 func canvi_velocitat(nova_velocitat):
 	velocitat = nova_velocitat
@@ -81,14 +85,15 @@ func _on_meta_body_entered(body):
 	if body.name == 'Coche':
 		if checkpoint == 1:
 			num_voltes = num_voltes + 1
+			emit_signal('volta_nova')
 			temps_final = ((OS.get_ticks_msec() - temps_inicial)/1000.0)
 			temps_inicial = OS.get_ticks_msec()
 			$"Velocimetro/tempos/Label2".text = str(temps_inicial)
 			$"Velocimetro/tempos/Label3".text = str(temps_final)
-			if temps_final < millor_temps :
+			if temps_final < temps_bot[escena] or temps_final < millor_temps :
 				$"Velocimetro/tempos/Label4".text = str(temps_final)
 			else :
-				$"Velocimetro/tempos/Label4".text = str(millor_temps)
+				$"Velocimetro/tempos/Label4".text = str(temps_bot[escena])
 		checkpoint = 0
 		print ("portes ",num_voltes," voltes acabades")
 func _on_Timer_timeout():

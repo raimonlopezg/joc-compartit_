@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://imatges/aie99ykGT.png" type="Texture" id=1]
+[ext_resource path="res://imatges/gran-turismo-sport-coche-de-carreras-papel-pintado-2560x1080_14.jpeg" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+position = Vector2( 538, 297 )
+scale = Vector2( 0.439844, 0.568519 )
+texture = ExtResource( 2 )
+
+[node name="Aie99YkGt" type="Sprite" parent="ParallaxLayer"]
+material = SubResource( 1 )
+position = Vector2( 509.301, 278 )
+rotation = -3.14159
+scale = Vector2( 1.92994, 1.95251 )
+texture = ExtResource( 1 )

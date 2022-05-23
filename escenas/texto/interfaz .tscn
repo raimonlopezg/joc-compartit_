@@ -2,19 +2,19 @@
 
 [ext_resource path="res://escenas/texto/pruebas interfaz .tres" type="DynamicFont" id=1]
 [ext_resource path="res://escenas/texto/pruebas interfaz 2.tres" type="DynamicFont" id=2]
-[ext_resource path="res://imatges/Tilesheet/pngwing.com.png" type="Texture" id=3]
 [ext_resource path="res://escenas/texto/fondo interfaz .tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/texto/interfaz .gd" type="Script" id=5]
+[ext_resource path="res://imatges/Intro/icono intro.png" type="Texture" id=6]
 
 [node name="menu" type="Control"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -478.5
-margin_top = -254.5
-margin_right = 478.5
-margin_bottom = 254.5
+anchor_left = 0.596
+anchor_top = 0.243
+anchor_right = 0.596
+anchor_bottom = 0.243
+margin_left = -731.304
+margin_top = -143.8
+margin_right = 402.696
+margin_bottom = 851.2
 script = ExtResource( 5 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
@@ -22,8 +22,10 @@ script = ExtResource( 5 )
 [node name="VBox botones" type="VBoxContainer" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -102.0
-margin_right = 228.0
+margin_left = 161.0
+margin_top = -545.0
+margin_right = 389.0
+margin_bottom = -443.0
 
 [node name="jugar" type="Button" parent="VBox botones"]
 margin_right = 228.0
@@ -32,8 +34,9 @@ custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_fonts/font = ExtResource( 2 )
 text = "jugar"
-icon = ExtResource( 3 )
+icon = ExtResource( 6 )
 flat = true
+align = 0
 
 [node name="salir" type="Button" parent="VBox botones"]
 margin_top = 53.0
@@ -45,8 +48,9 @@ custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "sortir"
-icon = ExtResource( 3 )
+icon = ExtResource( 6 )
 flat = true
+align = 0
 
 [connection signal="pressed" from="VBox botones/jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBox botones/salir" to="." method="_on_salir_pressed"]
