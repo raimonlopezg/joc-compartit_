@@ -12,9 +12,9 @@ var timer = true
 var checkpoint = 0
 var temps_inicial = 1000000
 var temps_final = 0
-var millor_temps = 0
+var millor_temps = temps_bot
 var escena = 0
-var temps_bot = [29.042, 230923]
+var temps_bot = [29.042,16.503]
 
 
 signal velocitat_canviada(nova_velocitat)
@@ -96,8 +96,10 @@ func _on_meta_body_entered(body):
 				$"Velocimetro/tempos/Label4".text = str(temps_bot[escena])
 			if temps_final < temps_bot[escena] and temps_final > millor_temps :
 				$"Velocimetro/tempos/Label4".text = str(millor_temps)
+			print (millor_temps)
+			print (temps_final)
 		checkpoint = 0
-		print ("portes ",num_voltes," voltes acabades")
+		$"Velocimetro/tempos/Label9".text = str(num_voltes)
 func _on_Timer_timeout():
 	timer = false
 	temps_inicial = OS.get_ticks_msec()

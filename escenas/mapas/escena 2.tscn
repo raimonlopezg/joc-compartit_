@@ -1,4 +1,4 @@
-[gd_scene load_steps=118 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://escenas/zonas/zona boxes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/zonas/areas importants .tscn" type="PackedScene" id=2]
@@ -2315,6 +2315,14 @@ font_data = ExtResource( 12 )
 size = 12
 font_data = ExtResource( 6 )
 
+[sub_resource type="DynamicFont" id=184]
+size = 33
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=185]
+size = 12
+font_data = ExtResource( 6 )
+
 [sub_resource type="Curve2D" id=178]
 _data = {
 "points": PoolVector2Array( -228.798, 3.68229, 228.798, -3.68229, 507, 413, -27.2647, -61.6601, 27.2647, 61.6601, 775, 442, -53.271, 0.838913, 53.271, -0.838913, 846, 517, 22.2312, 46.9791, -22.2312, -46.9791, 885, 417, 22.2312, 61.6601, -22.2312, -61.6601, 804, 268, 0, 0, 0, 0, 730, 219, -8.38913, -67.5325, 8.38913, 67.5325, 693, 294, 0, 0, 0, 0, 637, 366, 11.7448, 39.4289, -11.7448, -39.4289, 584, 327, 53.6904, -0.838913, -53.6904, 0.838913, 414, 229, -3.35565, -88.5053, 3.35565, 88.5053, 270, 324, -135.709, 15.5643, 135.709, -15.5643, 507, 413 )
@@ -2685,6 +2693,51 @@ margin_right = 171.0
 margin_bottom = 89.0
 custom_fonts/font = SubResource( 92 )
 text = "------"
+align = 1
+valign = 1
+
+[node name="ColorRect8" type="ColorRect" parent="Coche/Velocimetro/tempos"]
+anchor_left = -9.032
+anchor_right = -9.032
+margin_left = 1488.57
+margin_right = 1572.57
+margin_bottom = 35.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Coche/Velocimetro/tempos"]
+anchor_left = -9.032
+anchor_right = -9.032
+margin_left = 1535.57
+margin_top = 1.0
+margin_right = 1571.57
+margin_bottom = 34.0
+color = Color( 0.6, 0.584314, 0.584314, 1 )
+
+[node name="ColorRect9" type="ColorRect" parent="Coche/Velocimetro/tempos"]
+anchor_left = -9.032
+anchor_right = -9.032
+margin_left = 1489.57
+margin_top = 1.0
+margin_right = 1534.57
+margin_bottom = 34.0
+color = Color( 0.254902, 0.239216, 0.239216, 1 )
+
+[node name="Label9" type="Label" parent="Coche/Velocimetro/tempos"]
+margin_left = -36.0
+margin_top = 1.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 184 )
+text = "00"
+align = 1
+valign = 1
+
+[node name="Label8" type="Label" parent="Coche/Velocimetro/tempos"]
+margin_left = -79.0
+margin_top = 6.0
+margin_right = -40.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 185 )
+text = "lap"
 align = 1
 valign = 1
 

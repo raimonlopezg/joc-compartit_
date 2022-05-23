@@ -2,7 +2,7 @@ extends Control
 
 func _on_Button_pressed():
 	#mapa1
-	get_tree().change_scene("res://escenas/mapas/escena 1.tscn")
+	get_tree().change_scene 
 
 func _on_Button2_pressed():
 	#mapa2
