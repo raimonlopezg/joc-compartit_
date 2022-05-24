@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://escenas/texto/pruebas interfaz .tres" type="DynamicFont" id=1]
 [ext_resource path="res://escenas/texto/pruebas interfaz 2.tres" type="DynamicFont" id=2]
-[ext_resource path="res://escenas/texto/fondo interfaz .tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenas/texto/6yzTOX31Pk.png" type="Texture" id=3]
+[ext_resource path="res://escenas/texto/fondo menu .tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/texto/interfaz .gd" type="Script" id=5]
 [ext_resource path="res://imatges/Intro/icono intro.png" type="Texture" id=6]
+[ext_resource path="res://imatges/Intro/tiu intro.png" type="Texture" id=7]
 
 [node name="menu" type="Control"]
 anchor_left = 0.596
@@ -18,6 +20,16 @@ margin_bottom = 851.2
 script = ExtResource( 5 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="TiuIntro" type="Sprite" parent="."]
+position = Vector2( 1080, 469 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 7 )
+
+[node name="6YzTox31Pk" type="Sprite" parent="."]
+position = Vector2( 1067, 63 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
 
 [node name="VBox botones" type="VBoxContainer" parent="."]
 anchor_top = 1.0

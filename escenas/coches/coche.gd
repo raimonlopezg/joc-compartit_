@@ -90,14 +90,12 @@ func _on_meta_body_entered(body):
 			temps_inicial = OS.get_ticks_msec()
 			$"Velocimetro/tempos/Label2".text = str(temps_inicial)
 			$"Velocimetro/tempos/Label3".text = str(temps_final)
-			if temps_final < temps_bot[escena] and temps_final < millor_temps :
-				$"Velocimetro/tempos/Label4".text = str(temps_final)
-			if temps_final > temps_bot[escena] :
-				$"Velocimetro/tempos/Label4".text = str(temps_bot[escena])
-			if temps_final < temps_bot[escena] and temps_final > millor_temps :
-				$"Velocimetro/tempos/Label4".text = str(millor_temps)
 			print (millor_temps)
 			print (temps_final)
+			if temps_final < temps_bot[escena] :
+				get_tree().change_scene("res://escenas/texto/final.tscn")
+			else :
+				print ("et gauanya el bot")
 		checkpoint = 0
 		$"Velocimetro/tempos/Label9".text = str(num_voltes)
 func _on_Timer_timeout():

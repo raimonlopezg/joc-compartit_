@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="joc compartit"
-run/main_scene="res://escenas/mapas/escena 1.tscn"
+run/main_scene="res://escenas/texto/interfaz .tscn"
 config/icon="res://imatges/icon.png"
 
 [display]

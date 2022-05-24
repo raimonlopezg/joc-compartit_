@@ -5,7 +5,7 @@
 [ext_resource path="res://imatges/Intro/Captura de Pantalla 2022-05-23 a las 5.34.53 p. m..png" type="Texture" id=3]
 [ext_resource path="res://escenas/texto/menu.gd" type="Script" id=4]
 [ext_resource path="res://fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://imatges/Intro/flecha.png" type="Texture" id=6]
+[ext_resource path="res://imatges/Intro/flechaa.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -60,15 +60,16 @@ icon = ExtResource( 3 )
 flat = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 360.0
-margin_bottom = 272.0
+margin_left = 100.0
+margin_top = 85.0
+margin_right = 712.0
+margin_bottom = 543.0
+rect_rotation = 180.0
 rect_scale = Vector2( 0.15, 0.15 )
 
 [node name="Button3" type="Button" parent="VBoxContainer2"]
-margin_right = 350.0
-margin_bottom = 262.0
+margin_right = 612.0
+margin_bottom = 458.0
 icon = ExtResource( 6 )
 flat = true
 

@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://imatges/Intro/casita.png" type="Texture" id=1]
+[ext_resource path="res://imatges/Intro/restrt.png" type="Texture" id=2]
+[ext_resource path="res://escenas/texto/F.Alonso.tscn" type="PackedScene" id=3]
+[ext_resource path="res://imatges/Intro/flechaa.png" type="Texture" id=4]
+[ext_resource path="res://finish.gd" type="Script" id=5]
+[ext_resource path="res://imatges/Intro/win.png" type="Texture" id=6]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
+
+[node name="Win" type="Sprite" parent="."]
+position = Vector2( 230, 74 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 700.0
+margin_top = 400.0
+margin_right = 1312.0
+margin_bottom = 858.0
+rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button next" type="Button" parent="VBoxContainer"]
+margin_right = 612.0
+margin_bottom = 458.0
+icon = ExtResource( 4 )
+flat = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 400.0
+margin_top = 400.0
+margin_right = 1012.0
+margin_bottom = 1006.0
+rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button restart" type="Button" parent="VBoxContainer2"]
+margin_right = 612.0
+margin_bottom = 606.0
+icon = ExtResource( 2 )
+flat = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+margin_left = 100.0
+margin_top = 400.0
+margin_right = 1135.0
+margin_bottom = 1327.0
+rect_scale = Vector2( 0.17, 0.17 )
+
+[node name="Button menu" type="Button" parent="VBoxContainer3"]
+margin_right = 1035.0
+margin_bottom = 927.0
+icon = ExtResource( 1 )
+flat = true
+
+[connection signal="pressed" from="VBoxContainer/Button next" to="." method="_on_Button_next_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Button restart" to="." method="_on_Button_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Button menu" to="." method="_on_Button_menu_pressed"]
