@@ -42,7 +42,6 @@ tracks/0/keys = {
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="321go" type="Label" parent="."]
-visible = false
 modulate = Color( 0.960784, 0.952941, 0.498039, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0

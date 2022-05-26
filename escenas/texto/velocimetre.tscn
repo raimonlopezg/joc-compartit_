@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://imatges/unnamed.png" type="Texture" id=1]
-[ext_resource path="res://imatges/output-onlinepngtools.png" type="Texture" id=2]
+[ext_resource path="res://imatges/Propietats cotxe/velocimetro.png" type="Texture" id=1]
+[ext_resource path="res://imatges/Propietats cotxe/agulla velocimetro.png" type="Texture" id=2]
 [ext_resource path="res://escenas/texto/velocimetre.gd" type="Script" id=3]
 
 [node name="CanvasLayer" type="CanvasLayer"]
