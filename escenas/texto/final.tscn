@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://imatges/Intro/icono-casa.png" type="Texture" id=1]
 [ext_resource path="res://fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://imatges/Intro/flechaa.png" type="Texture" id=4]
 [ext_resource path="res://finish.gd" type="Script" id=5]
 [ext_resource path="res://imatges/Intro/win.png" type="Texture" id=6]
+[ext_resource path="res://fonts/Kenney Future.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 66
@@ -18,6 +19,12 @@ size = 66
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 39
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -64,15 +71,15 @@ flat = true
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
 margin_left = 100.0
 margin_top = 400.0
-margin_right = 1135.0
+margin_right = 412.0
 margin_bottom = 1327.0
 rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="Button menu" type="Button" parent="VBoxContainer3"]
-margin_right = 1035.0
+margin_right = 454.0
 margin_bottom = 306.0
-custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "menu"
 icon = ExtResource( 1 )
 flat = true
 

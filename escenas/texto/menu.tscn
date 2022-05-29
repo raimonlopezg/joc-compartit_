@@ -38,24 +38,24 @@ margin_bottom = 722.0
 rect_scale = Vector2( 0.4, 0.4 )
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 1077.0
+margin_right = 1041.0
 margin_bottom = 399.0
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_constants/hseparation = 7
 custom_fonts/font = SubResource( 1 )
-text = "mapa 1"
+text = "map 1"
 icon = ExtResource( 2 )
 flat = true
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 403.0
-margin_right = 1077.0
+margin_right = 1041.0
 margin_bottom = 825.0
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "mapa 2"
+text = "map 2"
 icon = ExtResource( 3 )
 flat = true
 
